@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
+    'code_testing.apps.CodeTestingConfig',
 ]
 
 MIDDLEWARE = [
