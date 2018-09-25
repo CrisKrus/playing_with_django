@@ -14,9 +14,9 @@ class GithubFile(models.Model):
         super().__init__(*args, **kwargs)
         # TODO: extract to github client
         url = 'https://api.github.com/repos/' + \
-              self.username + '/' + \
-              self.repository + '/' + \
-              self.path
+              self.username.__str__() + '/' + \
+              self.repository.__str__() + '/' + \
+              self.path.__str__()
         request = requests.get(url)
         self.__data = request.json()
 
@@ -24,4 +24,4 @@ class GithubFile(models.Model):
         return self.__data['type']
 
     def content(self):
-        return base64.b64decode(self.__data['content'])
+        return base64.b64decode(self.__data['content']).decode('UTF-8')
