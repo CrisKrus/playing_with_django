@@ -16,4 +16,4 @@ class GithubFile(TestCase):
         readme = File(username='criskrus',
                       repository='juego-saber',
                       path='readme')
-        self.assertIs(readme.type, "file")
+        self.assertEqual(readme.type(), "file")
