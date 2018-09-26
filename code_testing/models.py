@@ -10,9 +10,11 @@ class GithubFile(models.Model):
     path = models.CharField(max_length=1000)
 
     def type(self):
+        # TODO should not make a request anytime that call the method
         return self.get_data()['type']
 
     def content(self):
+        # TODO should not make a request anytime that call the method
         return base64.b64decode(self.get_data()['content']).decode('UTF-8')
 
     def get_data(self):
