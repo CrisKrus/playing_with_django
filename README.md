@@ -5,6 +5,6 @@
 ## How to run project
 
   1. Clone it! `git clone https://github.com/CrisKrus/playing_with_django.git`
-  2. Run Django server from root directory of application `python manage.py runserver`
+  2. Run it ! (From root directory of application) `python manage.py runserver`
   
 ## Python version 3.6.5
